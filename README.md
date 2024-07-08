@@ -34,10 +34,6 @@ Is's a library used to show notifications. It was used to show the events and ac
 
 ## Tool
 
-### Lerna (version **8.1.3**)
-
-This tool manage JavaScript monorepositories. A monorepository it's an only repository the has many packages or projects which may be related to each other. It ease the process with some utilities and workflows to work with many packages.
-
 ### git (version **2.25.1**)
 
 This is the main tool to control the versions of the code. It creates a history and revert changes if necesary. It provide a CLI to make different operations like initialice a repository, add changes, work with branches and collaborate with other developers.

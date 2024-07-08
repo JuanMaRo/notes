@@ -56,7 +56,12 @@ It's a relational database engine. It's light and provides the core to manage da
 
 It creates an environment based on the V8 engine, where JavaScript is executed, used on all the browsers based on chromium. It's necessary to execute any JavaScript code outside the browser.
 
-## HOW TO RUN
+## Requirements
+
+- Python 3.12
+- Node 20
+
+## How to Run
 
 1. Go to the `backend` directory and create a virtual environment:
 

@@ -1,0 +1,72 @@
+<div>
+  <div class="content">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-sm-6">
+                <h1 class="card-title">Notes</h1>
+              </div>
+              <div class="col-sm-6">
+                <button type="button" class="btn btn-fill btn-primary float-right" [routerLink]="['note/new']">Add Note</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <h2 class="card-title text-center">Active notes</h2>
+            </div>
+            <div class="table-responsive-md">
+              <table class="table table-striped">
+                <thead class="text-primary">
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col" class="text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let note of noteListUnarchived">
+                    <td scope="row">{{ note.title }}</td>
+                    <td>
+                      <button type="button" class="btn btn-info" placement="top"
+                      ngbTooltop="See note" [routerLink]="['note/edit/', note.id]" >See</button>&nbsp;
+                      <button type="button" class="btn btn-danger" placement="top"
+                      ngbTooltop="See note" (click)="deleteNote(note.id)">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div *ngIf="noteListArchived?.length > 0" class="card-body">
+            <div class="row">
+              <h2 class="card-title text-center">Archived notes</h2>
+            </div>
+            <div class="table-responsive-md">
+              <table class="table table-striped">
+                <thead class="text-primary">
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col" class="text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let note of noteListArchived">
+                    <td scope="row">{{ note.title }}</td>
+                    <td>
+                      <button type="button" class="btn btn-info" placement="top"
+                      ngbTooltop="See note" [routerLink]="['note/edit/', note.id]" >See</button>&nbsp;
+                      <button type="button" class="btn btn-danger" placement="top"
+                      ngbTooltop="See note" (click)="deleteNote(note.id)">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
